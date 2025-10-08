@@ -67,3 +67,11 @@
   opacity: 0.25;
   background: linear-gradient(-30deg, var(--electric-light-color), transparent, var(--electric-border-color));
 }
+
+@media (max-width: 768px) {
+  .eb-stroke,
+  .eb-glow-1,
+  .eb-glow-2 {
+    display: none;
+  }
+}

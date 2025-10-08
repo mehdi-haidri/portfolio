@@ -69,7 +69,7 @@ export function Projects() {
             <ElectricBorder
               className={" animate-on-scroll"}
               color="#ad46ff"
-              speed={1}
+              speed={0.1}
               chaos={0.5}
               thickness={1.5}
               style={{ borderRadius: 16 }}

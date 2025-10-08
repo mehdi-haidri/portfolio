@@ -120,9 +120,9 @@ const ElectricBorder = ({ children, color = '#5227FF', speed = 1, chaos = 1, thi
       </svg>
 
       <div className="eb-layers">
-        <div ref={strokeRef} className="eb-stroke" />
+        {/* <div ref={strokeRef} className="eb-stroke" />
         <div className="eb-glow-1" />
-        <div className="eb-glow-2" />
+        <div className="eb-glow-2" /> */}
         <div className="eb-background-glow" />
       </div>
 

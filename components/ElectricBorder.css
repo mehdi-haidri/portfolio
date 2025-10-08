@@ -64,6 +64,6 @@
   z-index: -1;
   transform: scale(1.08);
   filter: blur(32px);
-  opacity: 0.3;
+  opacity: 0.25;
   background: linear-gradient(-30deg, var(--electric-light-color), transparent, var(--electric-border-color));
 }

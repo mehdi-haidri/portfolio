@@ -67,11 +67,11 @@ export function Projects() {
               className="transition-all animate-on-scroll hover:-translate-y-2">
 
             <ElectricBorder
-              className={" animate-on-scroll-"}
+              className={" animate-on-scroll"}
               color="#ad46ff"
               speed={1}
               chaos={0.5}
-              thickness={2}
+              thickness={1.5}
               style={{ borderRadius: 16 }}
             >
             <Card

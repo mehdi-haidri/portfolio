@@ -1,24 +1,36 @@
 "use client"
 
 import { Badge } from "@/components/ui/badge"
+import { ArrowUpRight } from "lucide-react"
 import { useEffect, useRef } from "react"
 
 const experiences = [
   {
-    period: "2026-04 — 2026-09",
-    title: "Stagiaire Développeur Full-Stack",
-    company: "Oracle",
+    period: "2024 — Present",
+    title: "Senior Full Stack Developer",
+    company: "Tech Company",
+    url: "https://example.com",
     description:
-      "Développement de AIDP AgentHub et montée en compétences en développement full-stack Java et Python, plateformes basées sur des microservices, Kubernetes, OCI, MLOps et déploiement sur de multiples environnements. Travail au sein de flux d’ingénierie d’entreprise couvrant la sécurité, la gouvernance, l’accès sécurisé aux données et les opérations de services de plateforme.",
-    technologies: ["Java", "Python", "Microservices", "Kubernetes", "OCI", "MLOps"],
+      "Build and maintain critical components used across the entire platform. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web development.",
+    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
   },
   {
-    period: "2025-07 — 2025-09",
-    title: "Stagiaire Développeur Full-Stack",
-    company: "Marketing Confort · Fès, Maroc",
+    period: "2022 — 2024",
+    title: "Full Stack Developer",
+    company: "Startup Inc",
+    url: "https://example.com",
     description:
-      "Acquisition de compétences en microservices Spring Boot, développement web Next.js, développement mobile React Native et contrôle d’accès basé sur les rôles avec Keycloak.",
-    technologies: ["Spring Boot", "Next.js", "React Native", "Keycloak"],
+      "Developed and shipped highly interactive web applications for diverse clients. Collaborated with designers and backend engineers to deliver pixel-perfect, performant user experiences.",
+    technologies: ["Next.js", "React", "Express", "MongoDB", "Docker"],
+  },
+  {
+    period: "2020 — 2022",
+    title: "Frontend Developer",
+    company: "Digital Agency",
+    url: "https://example.com",
+    description:
+      "Built responsive websites and web applications for various clients. Focused on creating accessible, SEO-friendly interfaces with modern frontend technologies.",
+    technologies: ["JavaScript", "Vue.js", "Tailwind CSS", "REST APIs"],
   },
 ]
 
@@ -58,6 +70,15 @@ export function Experience() {
                   <div>
                     <h3 className="text-xl font-medium text-foreground group-hover:text-primary transition-colors">
                       {exp.title} · {exp.company}
+                      <a
+                        href={exp.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block ml-2 align-middle"
+                        aria-label={`Visit ${exp.company}`}
+                      >
+                        <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </a>
                     </h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-pretty">{exp.description}</p>

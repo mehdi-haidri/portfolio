@@ -7,9 +7,9 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Your Name - Full Stack Developer",
-  description: "Full Stack Developer specializing in React, Node.js, and modern web technologies",
-  generator: "v0.app",
+  title: "Elmahdi Haidri - Software Engineer",
+  description:
+    "Portfolio of Elmahdi Haidri, a software engineer passionate about AI, AI-powered products, and cloud-native systems.",
 }
 
 export default function RootLayout({

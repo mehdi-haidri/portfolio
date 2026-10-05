@@ -33,7 +33,7 @@ export function Hero() {
             <div className="relative w-48 h-48 md:w-56 md:h-56">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-xl opacity-50 animate-pulse-glow"></div>
               <img
-                src="/me.png"
+                src="/me.jpeg"
                 alt="Profile"
                 className="relative w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-2xl"
               />
@@ -53,10 +53,11 @@ export function Hero() {
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-primary font-light animate-on-scroll animate-on-scroll-delay-1 overflow-hidden border-r-4 border-primary animate-typing whitespace-nowrap inline-block">
-              Full Stack Developer
+              Software Engineer
             </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed animate-on-scroll animate-on-scroll-delay-2">
-              I build robust, scalable web applications from backend to frontend. Specializing in Java, PHP, and JavaScript to create powerful full-stack solutions.
+              Software Engineer passionate about AI and AI-powered products, with a strong interest in developer tools,
+              data platforms, and cloud-native systems.
             </p>
 
             <div className="flex gap-4 pt-4 justify-center md:justify-start animate-on-scroll animate-on-scroll-delay-3">

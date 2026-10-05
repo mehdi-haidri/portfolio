@@ -36,19 +36,10 @@ export function About() {
             creating experiences that not only look great but are meticulously built for performance and usability.
           </p>
           <p className="text-pretty animate-on-scroll animate-on-scroll-delay-2">
-            Currently, I'm a Full Stack Developer at <span className="font-medium text-primary">Your Company</span>,
-            specializing in building scalable web applications. I contribute to the creation and maintenance of both
-            frontend and backend systems, ensuring our platform meets modern web standards and best practices to deliver
-            an exceptional user experience.
+            Je suis étudiant en <span className="font-medium text-primary">Génie Informatique</span> à l’ENSAH — École Nationale des Sciences Appliquées d’Al Hoceima, où je développe une solide base en conception logicielle et en technologies web modernes.
           </p>
           <p className="text-pretty animate-on-scroll animate-on-scroll-delay-3">
-            In the past, I've had the opportunity to develop software across a variety of settings — from{" "}
-            <span className="font-medium text-primary">tech startups</span> and{" "}
-            <span className="font-medium text-primary">large corporations</span> to{" "}
-            <span className="font-medium text-primary">digital agencies</span> and{" "}
-            <span className="font-medium text-primary">freelance projects</span>. Additionally, I also released a{" "}
-            <span className="font-medium text-primary">comprehensive video course</span> a few years ago, guiding
-            learners through building a full-stack web application.
+            <span className="font-medium text-primary">ENSAH · Al Hoceima</span> — Formation en Génie Informatique, de septembre 2021 à juillet 2026.
           </p>
         </div>
       </div>

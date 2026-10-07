@@ -30,6 +30,8 @@ const TargetCursor = ({ targetSelector = '.cursor-target', spinDuration = 2, hid
 
   useEffect(() => {
     if (!cursorRef.current) return;
+    const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+    if (!finePointerQuery.matches) return;
 
     const originalCursor = document.body.style.cursor;
     if (hideDefaultCursor) {

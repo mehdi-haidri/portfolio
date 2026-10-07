@@ -4,10 +4,12 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { useLanguage, type Language } from "@/components/language-provider"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +39,7 @@ export function Header() {
             onClick={() => scrollToSection("hero")}
             className=" cursor-target text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           >
-            Portfolio
+            {t("portfolio")}
           </button>
 
           {/* Desktop Navigation */}
@@ -46,14 +48,15 @@ export function Header() {
               onClick={() => scrollToSection("projects")}
               className=" cursor-target text-foreground/80 hover:text-primary transition-colors"
             >
-              Projects
+              {t("projects")}
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
               className=" cursor-target bg-gradient-to-r from-primary to-accent hover:opacity-90"
             >
-              Contact
+              {t("contact")}
             </Button>
+            <LanguageSwitcher language={language} setLanguage={setLanguage} label={t("language")} />
             <ThemeToggle />
           </div>
 
@@ -71,14 +74,15 @@ export function Header() {
                 onClick={() => scrollToSection("projects")}
                 className="text-foreground/80 hover:text-primary transition-colors text-left"
               >
-                Projects
+                {t("projects")}
               </button>
               <Button
                 onClick={() => scrollToSection("contact")}
                 className="bg-gradient-to-r from-primary to-accent hover:opacity-90 w-full"
               >
-                Contact
+                {t("contact")}
               </Button>
+              <LanguageSwitcher language={language} setLanguage={setLanguage} label={t("language")} />
               <div className="flex justify-center pt-2">
                 <ThemeToggle />
               </div>
@@ -87,5 +91,33 @@ export function Header() {
         )}
       </nav>
     </header>
+  )
+}
+
+function LanguageSwitcher({
+  language,
+  setLanguage,
+  label,
+}: {
+  language: Language
+  setLanguage: (language: Language) => void
+  label: string
+}) {
+  return (
+    <div className="flex items-center gap-1 text-sm" aria-label={label}>
+      {(["en", "fr"] as const).map((option) => (
+        <button
+          key={option}
+          type="button"
+          onClick={() => setLanguage(option)}
+          className={`cursor-target rounded px-2 py-1 uppercase transition-colors ${
+            language === option ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-primary"
+          }`}
+          aria-pressed={language === option}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
   )
 }

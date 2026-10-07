@@ -6,11 +6,12 @@ import { Projects } from "@/components/projects"
 import { Contact } from "@/components/contact"
 import { AnimatedBackground } from "@/components/animated-background"
 import TargetCursor from '@/components/TargetCursor'
-import Loop from "@/components/Loop"
+import { LanguageProvider } from "@/components/language-provider"
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <LanguageProvider>
+      <div className="min-h-screen relative overflow-hidden">
       <AnimatedBackground />
         <TargetCursor 
         spinDuration={2}
@@ -18,12 +19,12 @@ export default function Home() {
       />
       <Header />
       <Hero />
-      <Loop />
       <About />
       <Experience />
       <Projects />
       <Contact />
      
-    </div>
+      </div>
+    </LanguageProvider>
   )
 }

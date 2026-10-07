@@ -1,11 +1,14 @@
 "use client"
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Download, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useEffect, useRef } from "react"
+import { useLanguage } from "@/components/language-provider"
+import Loop from "@/components/Loop"
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,7 +29,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section id="hero" ref={sectionRef} className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="hero" ref={sectionRef} className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 pb-48">
       <div className="max-w-5xl w-full">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-25">
           <div className="animate-on-scroll animate-float">
@@ -53,11 +56,10 @@ export function Hero() {
               </span>
             </h1>
             <p className="text-2xl md:text-3xl text-primary font-light animate-on-scroll animate-on-scroll-delay-1 overflow-hidden border-r-4 border-primary animate-typing whitespace-nowrap inline-block">
-              Software Engineer
+              {t("softwareEngineer")}
             </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed animate-on-scroll animate-on-scroll-delay-2">
-              Software Engineer passionate about AI and AI-powered products, with a strong interest in developer tools,
-              data platforms, and cloud-native systems.
+              {t("heroDescription")}
             </p>
 
             <div className="flex gap-4 pt-4 justify-center md:justify-start animate-on-scroll animate-on-scroll-delay-3">
@@ -76,9 +78,18 @@ export function Hero() {
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
+              <Button asChild className="cursor-target bg-gradient-to-r from-primary to-accent hover:opacity-90">
+                <a href={t("cvFile")} download={t("cvDownloadName")}>
+                  <Download className="h-5 w-5 mr-2" />
+                  {t("downloadCv")}
+                </a>
+              </Button>
             </div>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full">
+        <Loop />
       </div>
     </section>
   )

@@ -13,6 +13,7 @@ export default function Loop() {
   return (
     <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
       <LogoLoop
+        className="technology-slider"
         logos={techLogos}
         speed={120}
         direction="left"
